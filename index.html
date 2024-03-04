@@ -9,21 +9,28 @@
 <body>
 
 <!-- Nav Bar -->
-<ul class = "topnav">
-    <button type="submit"><i class="fa fa-search"></i></button>
-    <!-- <input type="text" placeholder="Search.."> -->
-    <li><a href="#about">About</a></li>
-    <li><a href="#analyze">Analyze</a></li>
-    <li><a href="#read">Read</a></li>
-    <li class="titleText"><a class="titleText"href="#oss">Open Source Shakespeare</a></li>
-</ul>
+<nav>
+    <ul class = "topnav">
+        <button id="MenuSearch"type="submit" aria-label="Search"><i class="fa fa-search"></i></button>
+        <!-- <input type="text" placeholder="Search.."> -->
+        <li><a href="#about">About</a></li>
+        <li><a href="#analyze">Analyze</a></li>
+        <li><a href="#read">Read</a></li>
+        <li class="titleText"><a class="titleText"href="#oss">Open Source Shakespeare</a></li>
+    </ul>
+</nav>
+<div id="menu_icon">
+    <div class = "bar1"></div>
+    <div class = "bar2"></div>
+    <div class = "bar3"></div>
+</div>
 <!-- Search Bar -->
 <div class = "searchArea">
     <form>
-        <input type="text"  class="input-text" placeholder="Search the complete works..." name="search">
-        <button type="submit"><i class="fa fa-search"></i></button>
+        <input type="text"  class="input-text" placeholder="Search the complete works..." name="search" aria-label="Search the complete works">
+        <button type="submit" aria-label="Search"><i class="fa fa-search"></i></button>
       </form>
-      <button id = "advancedSearch"type="button">Advanced Search</button>
+      <button id="advancedSearch" type="button" aria-label="Advanced Search">Advanced Search</button>
 
 </div>
 <!-- Main Text -->
@@ -31,14 +38,12 @@
 <p class = "headingText">An Experiment in Literary Technology</p>
 <!-- <p class = "body">other text about the site?</p> -->
 <div class = "buttons">
-    <button class = "functionButton"type="button">Read</button>
-    <button class = "functionButton"type="button">Analyze</button>
-    <button class = "functionButton"type="button">About</button>
+    <button class = "functionButton" type="button" aria-label="Read">Read</button>
+    <button class = "functionButton" type="button" aria-label="Analyze">Analyze</button>
+    <button class = "functionButton" type="button" aria-label="About">About</button>
 </div>
 </div>
 
 
 </body>
 </html>
-
-
