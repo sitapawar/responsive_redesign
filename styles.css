@@ -32,10 +32,33 @@ body{
   cursor: pointer;
   margin-top: 1vw;
   border:none;
-  width:22%;
+  width:100%;
   font-family: 'Playfair Display', serif;
   border-radius: 2vh;
 }
+.buttonContainer {
+  margin-bottom: 10px; /* Adjust the spacing between button-text pairs */
+  padding:12px;
+  align-items: center;
+  
+}
+.buttonDescription {
+  padding-top: 1vw;
+  width:90%;
+  text-align: center;
+
+}
+.buttonContainer p{
+  font-family:'Kohinoor Guharati';
+  font-size: 25px;
+  text-align: center;
+}
+/* .buttText{
+  padding:1vw;
+}
+.buttText p{
+  margin:2vw;
+} */
 /* Search Stuff Area */
 .searchArea{
   padding:4vw;
@@ -64,7 +87,6 @@ form{
   font-family: 'Playfair Display', serif;
   border-radius: 3vw;
 }
-
 button:hover{
   background-color: #71555A;
 }
@@ -73,7 +95,6 @@ input:focus {
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.8); /* Add a shadow when focused */
   outline:none
 }
-
 input{
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
   width:85%;
@@ -167,10 +188,21 @@ li a {
     
   }
 
-  #menu_icon{
+  /* #menu_icon{
     margin:auto 0;
     display:none;
     cursor:pointer;
+  } */
+  .bar {
+    width: 3vw;
+    height: 1vw;
+    background-color: #0000;
+    margin: 5px 0;
+  }
+  #menu_icon{
+    display: none;
+    cursor: pointer;
+    background-color: #0000;
   }
 
 
@@ -180,20 +212,38 @@ li a {
 
 
 
-  @media screen and (max-width: 820px) {
+  @media screen and (max-width: 900px) {
+    body{
+      background-size: 150%;
+    }
     /* nav bar */
-    li:not(.titleText) {
+    #menu_icon div {
+      width: 3.5vw;
+      height: .5vw;
+      background-color: black;      
+      margin: 1.3vw;
+      margin-top: 1vw;
+    }
+    #menu_icon{
+      display: inline-block;
+      cursor: pointer;
+    }
+    #menu_icon:hover{
+      background-color: #EED9D1;
+    }
+    li:not(.titleText, #menu_icon) {
       display: none;
     }
     .topnav button {
-      float: right;
+      display:none;
+      /* float: right;
       font-size:1.7vw;
       text-align: center;
       text-decoration: none;
       padding: 1vw 1vw;
       background:  #FFEDE5;
       color:  #432D31;
-      border: none;
+      border: none; */
     }
     form{
       margin-left: 57%;
@@ -207,13 +257,6 @@ li a {
       padding-left:1vw;
       font-family: 'Playfair Display', serif;
       height:3vw;
-    }
-    #menu_icon div {
-      width: 35px;
-      height: 3px;
-      background-color: white;
-      margin: 6px 0;
-      transition: 0.4s;
     }
     li a {
       display: block;
@@ -241,6 +284,7 @@ li a {
     /* Search Area */
     form{
       width:80%;
+      margin-top: 6vw;
     }
     #advancedSearch{
       margin-left: 55%;
@@ -297,6 +341,13 @@ li a {
 
   
   @media screen and (max-width: 400px) {
+    #menu_icon div {
+      width: 3.8vw;
+      height: .7vw;
+      background-color: black;      
+      margin: 1.2vw;
+      margin-top: 1.3vw;
+    }
     .functionButton{
       background: #432D31;
       color:#FFFF;
@@ -347,7 +398,7 @@ li a {
       text-align:center;
     }
     li a.titleText{
-      font-size:4vw;
+      font-size:5vw;
       padding: .5vw .5vw;
       font-family: 'Playfair Display SC', serif;
     }

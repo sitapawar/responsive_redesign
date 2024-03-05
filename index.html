@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<html lang="en">
 <html>
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -7,43 +8,53 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
-
 <!-- Nav Bar -->
 <nav>
     <ul class = "topnav">
-        <button id="MenuSearch"type="submit" aria-label="Search"><i class="fa fa-search"></i></button>
+        <li><button id="MenuSearch"type="submit" aria-label="Search"><i class="fa fa-search"></i></button></li>
         <!-- <input type="text" placeholder="Search.."> -->
         <li><a href="#about">About</a></li>
         <li><a href="#analyze">Analyze</a></li>
         <li><a href="#read">Read</a></li>
+        <li id="menu_icon" aria-label="Menu Icon with more results">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </li>
         <li class="titleText"><a class="titleText"href="#oss">Open Source Shakespeare</a></li>
     </ul>
 </nav>
-<div id="menu_icon">
-    <div class = "bar1"></div>
-    <div class = "bar2"></div>
-    <div class = "bar3"></div>
-</div>
+
 <!-- Search Bar -->
 <div class = "searchArea">
     <form>
-        <input type="text"  class="input-text" placeholder="Search the complete works..." name="search" aria-label="Search the complete works">
-        <button type="submit" aria-label="Search"><i class="fa fa-search"></i></button>
+        <input type="text"  class="input-text" placeholder="Search the complete works..." name="search" aria-label="Input Text: Search the complete works">
+        <button type="submit" aria-label="Search Works"><i class="fa fa-search"></i></button>
       </form>
-      <button id="advancedSearch" type="button" aria-label="Advanced Search">Advanced Search</button>
+      <button id="advancedSearch" type="button" aria-label="Advanced Search Button">Advanced Search</button>
 
 </div>
 <!-- Main Text -->
 <div class = "mainText">
 <p class = "headingText">An Experiment in Literary Technology</p>
 <!-- <p class = "body">other text about the site?</p> -->
-<div class = "buttons">
-    <button class = "functionButton" type="button" aria-label="Read">Read</button>
-    <button class = "functionButton" type="button" aria-label="Analyze">Analyze</button>
-    <button class = "functionButton" type="button" aria-label="About">About</button>
+<div class="buttons">
+    <div class="buttonContainer">
+      <button class="functionButton" type="button" aria-label="Read">Read</button>
+      <p class="buttonDescription">Browse the complete collection of Shakespeare’s plays, sonnets, and poems</p>
+    </div>
+    <div class="buttonContainer">
+      <button class="functionButton" type="button" aria-label="Analyze">Analyze</button>
+      <p class="buttonDescription">Analyze the language, themes, and structure of Shakespeare's works</p>
+    </div>
+    <div class="buttonContainer">
+      <button class="functionButton" type="button" aria-label="About">About</button>
+      <p class="buttonDescription">Learn more about Open Source Shakespeare and its mission</p>
+    </div>
+  </div>
 </div>
-</div>
-
+<!-- <div class="buttText"><button class = "functionButton" type="button" aria-label="Read Button">Read</button>
+    <p>Browse the complete collection of Shakespeare’s plays, sonnets, and poems</p></div> -->
 
 </body>
 </html>
