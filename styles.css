@@ -8,6 +8,7 @@ body{
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: 100%;
+  height: fit-content;
 }
 
 .headingText{
@@ -18,48 +19,44 @@ body{
 /* Read Analyze About Buttons */
 .buttons{
   display: flex;
-  flex-direction:row; /* or column, etc. */
+  flex-direction:row; 
   justify-content: space-around;
-  align-items: center;
-    flex-wrap: wrap;
+  /* align-items: center; */
+  flex-wrap: wrap;
 }
 
 .functionButton{
   background: #432D31;
   color:#FFFF;
-  padding:2vw;
   font-size: 2.5vw;
   cursor: pointer;
   margin-top: 1vw;
   border:none;
   width:100%;
+  padding:1vw;
   font-family: 'Playfair Display', serif;
   border-radius: 2vh;
 }
 .buttonContainer {
-  margin-bottom: 10px; /* Adjust the spacing between button-text pairs */
-  padding:12px;
+  text-align: center;
   align-items: center;
-  
+  flex-basis: 22%;
+  margin:2vw;
+  margin-top: .5vw;
+  margin-bottom: .5vw;
 }
+
 .buttonDescription {
-  padding-top: 1vw;
   width:90%;
   text-align: center;
-
+  margin-top: .5vw;
+  align-items: center;
 }
 .buttonContainer p{
-  font-family:'Kohinoor Guharati';
-  font-size: 25px;
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-size: 1.5vw;
   text-align: center;
 }
-/* .buttText{
-  padding:1vw;
-}
-.buttText p{
-  margin:2vw;
-} */
-/* Search Stuff Area */
 .searchArea{
   padding:4vw;
 }
@@ -205,9 +202,49 @@ li a {
     background-color: #0000;
   }
 
+  .PlayButton{
+    cursor: pointer;
+    margin-top: 1vw;
+    border:none;
+    width:100%;
+    padding:1vw;
+    font-family: 'Playfair Display', serif;
+    border-radius: 2vh;
+    height:9.5vw;
+    background-size: cover;
+    transition: transform 0.3s ease; 
+  }
+  .PlayButton:hover{
+    transform: scale(1.1); 
+  }
 
-
-
+  #AllsWell{
+    background-image:url('Assets/AllsWell.png');
+  }
+  #AntCleo{
+    background-image:url('Assets/Cleo.png');
+  }
+  #AsYouLike{
+    background-image:url('Assets/AsYouLike.png');
+  }
+  #Corio{
+    background-image:url('Assets/Corio.png');
+  }
+  #Comedy{
+    background-image:url('Assets/ComedyError.png');
+  }
+  #Cymbi{
+    background-image:url('Assets/Cymbi.png');
+  }
+  #Hamlet{
+    background-image:url('Assets/Hamlet.png');
+  }
+  #Henry{
+    background-image:url('Assets/HenryIV.png');
+  }
+  #Caesar{
+    background-image:url('Assets/Caesar.png');
+  }
 
 
 
@@ -319,14 +356,35 @@ li a {
       background: #432D31;
       color:#FFFF;
       padding:20px;
+      margin:10px;
       font-size: 30px;
       text-align: center;
       cursor: pointer;
-      margin: 20px;
       border:none;
       width:250px;
       font-family: 'Playfair Display', serif;
       border-radius: 30px;
+    }
+    .PlayButton{
+      padding:20px;
+      margin:10px;
+      cursor: pointer;
+      border:none;
+      width:250px;
+      height:120px;
+      font-family: 'Playfair Display', serif;
+      border-radius: 30px;
+      background-size: cover;
+      transition: transform 0.3s ease; 
+    }
+    .buttonDescription {
+      width:90%;
+      text-align: center;
+    }
+    .buttonContainer p{
+      font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+      font-size: 18px;
+      text-align: center;
     }
     .headingText{
       font-family: 'Playfair Display SC', serif;
@@ -361,6 +419,23 @@ li a {
       font-family: 'Playfair Display', serif;
       border-radius: 30px;
     }
+    .PlayButton{
+      padding:20px;
+      margin:10px;
+      cursor: pointer;
+      border:none;
+      width:200px;
+      height:100px;
+      font-family: 'Playfair Display', serif;
+      border-radius: 30px;
+      background-size: cover;
+      transition: transform 0.3s ease; 
+    }
+    .buttonContainer p{
+      font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+      font-size: 15px;
+      text-align: center;
+    }
     form{
       width:90%;
     }
@@ -393,7 +468,7 @@ li a {
     }
     .headingText{
       font-family: 'Playfair Display SC', serif;
-      font-size: 18px;
+      font-size: 27px;
       margin:8px;
       text-align:center;
     }
