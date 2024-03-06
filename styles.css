@@ -2,6 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display+SC&display=swap');
 
+/*General Body Styling*/
 body{
   background-color: #432D31;
   background-image: url('Assets/OSSBackground.png');
@@ -11,21 +12,33 @@ body{
   height: fit-content;
 }
 
-.headingText{
+h1{
   font-family: 'Playfair Display SC', serif;
   font-size: 2.5vw;
   text-align:center;
 }
-/* Read Analyze About Buttons */
+.mainText{
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5); 
+  background-color:#FFEDE5;
+  width:85%;
+  z-index: 3;
+  overflow-y: auto; 
+  height: calc(100vh - 3vw);
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, 0);
+  border-radius: 1vw;
+}
+
+/* Buttons Styling*/
 .buttons{
   display: flex;
   flex-direction:row; 
   justify-content: space-around;
-  /* align-items: center; */
   flex-wrap: wrap;
 }
-
-.functionButton{
+.functionButton{ 
+  /*Read analyze about buttons*/
   background: #432D31;
   color:#FFFF;
   font-size: 2.5vw;
@@ -36,6 +49,7 @@ body{
   padding:1vw;
   font-family: 'Playfair Display', serif;
   border-radius: 2vh;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
 }
 .buttonContainer {
   text-align: center;
@@ -45,7 +59,6 @@ body{
   margin-top: .5vw;
   margin-bottom: .5vw;
 }
-
 .buttonDescription {
   width:90%;
   text-align: center;
@@ -57,35 +70,15 @@ body{
   font-size: 1.5vw;
   text-align: center;
 }
-.searchArea{
-  padding:4vw;
+button:hover{
+  background-color: #71555A;
 }
+
+
+/*Search Bar Section*/
 form{
   margin-left: 50%;
   transform: translate(-50%, 0);
-}
-.searchArea button{
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
-  background: #432D31;
-  color:#FFEDE5;
-  padding:.5vw;
-  font-size: 1.8vw;
-  cursor: pointer;
-  margin-top: 2vw;
-  border:none;
-  width:10%;
-}
-
-#advancedSearch{
-  margin-left: 50%;
-  transform: translate(-50%, 0);
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
-  font-size: 1vw;
-  font-family: 'Playfair Display', serif;
-  border-radius: 3vw;
-}
-button:hover{
-  background-color: #71555A;
 }
 input:focus {
   border-color: #EED9D1; /* Change border color when focused */
@@ -101,19 +94,31 @@ input{
   font-family: 'Playfair Display', serif;
   height:3vw;
 }
+.searchArea{
+  padding:4vw;
+}
+.searchArea button{
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  background: #432D31;
+  color:#FFEDE5;
+  padding:.5vw;
+  font-size: 1.8vw;
+  cursor: pointer;
+  margin-top: 2vw;
+  border:none;
+  width:10%;
+}
+.searchArea button:hover{
+  background-color: #71555A;
+}
 
-/* Main Text Box Area */
-.mainText{
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5); 
-  background-color:#FFEDE5;
-  width:85%;
-  z-index: 3;
-  overflow-y: auto; 
-  height: calc(100vh - 3vw);
-  position: absolute;
-  left: 50%;
+#advancedSearch{
+  margin-left: 50%;
   transform: translate(-50%, 0);
-  border-radius: 1vw;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  font-size: 1vw;
+  font-family: 'Playfair Display', serif;
+  border-radius: 3vw;
 }
 
 /* Navigation Bar  */
@@ -132,11 +137,9 @@ ul.topnav {
     overflow: hidden;
     background-color: #FFEDE5;
   }
-  
 li {
   float: right;
-}
-  
+} 
 li a {
     display: block;
     color: black;
@@ -155,11 +158,9 @@ li a {
     background:  #FFEDE5;
     border: none;
   }
-
   .topnav button:hover{
     background-color: #EED9D1;
   }
-
   .topnav input[type=text] {
     float: right;
     padding: 1vw 1vw;
@@ -169,39 +170,24 @@ li a {
     background-color:#EED9D1;
     font-size: 1.6vw;
   }
-  
   li a:hover:not(.titleText) {
     background-color: #EED9D1;
   }
-
   li a.titleText{
     font-size:2vw;
     padding: .5vw .5vw;
     font-family: 'Playfair Display SC', serif;
   }
-
   li.titleText{
     float:left;
     
   }
-
-  /* #menu_icon{
-    margin:auto 0;
-    display:none;
-    cursor:pointer;
-  } */
   .bar {
     width: 3vw;
     height: 1vw;
     background-color: #0000;
     margin: 5px 0;
   }
-  #menu_icon{
-    display: none;
-    cursor: pointer;
-    background-color: #0000;
-  }
-
   .PlayButton{
     cursor: pointer;
     margin-top: 1vw;
@@ -213,11 +199,18 @@ li a {
     height:9.5vw;
     background-size: cover;
     transition: transform 0.3s ease; 
+    background-color: #432D31;
   }
   .PlayButton:hover{
     transform: scale(1.1); 
   }
+  #menu_icon{
+    display: none;
+    cursor: pointer;
+    background-color: #0000;
+  }
 
+/*Button Image Backgrounds*/
   #AllsWell{
     background-image:url('Assets/AllsWell.webp');
   }
@@ -245,10 +238,21 @@ li a {
   #Caesar{
     background-image:url('Assets/Caesar.webp');
   }
+  #MorePlays{
+    background-image:url('Assets/Shakey.webp');
+  }
+  #Venus{
+    background-image:url('Assets/venus.webp');
+  }
+  #Lucrexe{
+    background-image:url('Assets/lucrez.webp');
+  }
+  #LoversComp{
+    background-image:url('Assets/loverscomp.webp');
+  }
 
 
-
-
+/*900px and under!*/
   @media screen and (max-width: 900px) {
     body{
       background-size: 150%;
@@ -273,14 +277,6 @@ li a {
     }
     .topnav button {
       display:none;
-      /* float: right;
-      font-size:1.7vw;
-      text-align: center;
-      text-decoration: none;
-      padding: 1vw 1vw;
-      background:  #FFEDE5;
-      color:  #432D31;
-      border: none; */
     }
     form{
       margin-left: 57%;
@@ -341,6 +337,7 @@ li a {
       font-family: 'Playfair Display', serif;
       height:3.2vw;
     }
+    /*Buttons*/
     .searchArea button{
       box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
       background: #432D31;
@@ -367,6 +364,7 @@ li a {
     }
     .PlayButton{
       padding:20px;
+      box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
       margin:10px;
       cursor: pointer;
       border:none;
@@ -386,7 +384,7 @@ li a {
       font-size: 18px;
       text-align: center;
     }
-    .headingText{
+    h1{
       font-family: 'Playfair Display SC', serif;
       font-size: 25px;
       margin:10px;
@@ -466,7 +464,7 @@ li a {
       border:none;
       width:10%;
     }
-    .headingText{
+    .h1{
       font-family: 'Playfair Display SC', serif;
       font-size: 27px;
       margin:8px;
